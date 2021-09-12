@@ -41,11 +41,5 @@ def organise():
             folder_path.mkdir(exist_ok=True)
             file_path.rename(folder_path.joinpath(file_path))
 
-
-
 if __name__ == '__main__':
     organise()
-
-
-
-
