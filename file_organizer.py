@@ -1,4 +1,4 @@
-# Program to organize random files into folders based on the file extension
+# Program to organise random files into folders based on the file extension
 # Date: 12 Sept 2021
 
 import os
@@ -21,20 +21,30 @@ file_formatlist = {
     for file_format in file_formats
 }
 
-def organize():
+def organise():
     for entry in os.scandir():
         if entry.is_dir():
             continue
+
         file_path =  Path(entry)
-        # print(file_path)
         file_format = file_path.suffix.lower()
+
         if file_format in file_formatlist:
             folder_path = Path(file_formatlist[file_format])
+            print(folder_path)
             folder_path.mkdir(exist_ok=True)
             file_path.rename(folder_path.joinpath(file_path))
 
+        # When there is a file format that is not specified in the dictionary
+        else:
+            folder_path = Path('Others')
+            folder_path.mkdir(exist_ok=True)
+            file_path.rename(folder_path.joinpath(file_path))
+
+
+
 if __name__ == '__main__':
-    organize()
+    organise()
 
 
 
