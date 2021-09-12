@@ -6,6 +6,7 @@ Python script to organise files with respect to their file extensions.
 - Run the program ```python file_organiser.py```
 
 Tried the program on the "Dowloads" folder.
+
 Before organising:
 
 <img src="unorganised_downloads.png" alt="Rollit app demo image" width="600" />
