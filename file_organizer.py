@@ -31,7 +31,6 @@ def organise():
 
         if file_format in file_formatlist:
             folder_path = Path(file_formatlist[file_format])
-            print(folder_path)
             folder_path.mkdir(exist_ok=True)
             file_path.rename(folder_path.joinpath(file_path))
 
