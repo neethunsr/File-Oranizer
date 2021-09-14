@@ -1,4 +1,4 @@
-# File-Oranizer
+# File-Organizer
 Python script to organise files with respect to their file extensions.
 
 ## How-to-use
