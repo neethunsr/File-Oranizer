@@ -31,14 +31,12 @@ def organise():
 
         if file_format in file_formatlist:
             folder_path = Path(file_formatlist[file_format])
-            folder_path.mkdir(exist_ok=True)
-            file_path.rename(folder_path.joinpath(file_path))
-
         # When there is a file format that is not specified in the dictionary
         else:
             folder_path = Path('Others')
-            folder_path.mkdir(exist_ok=True)
-            file_path.rename(folder_path.joinpath(file_path))
+
+        folder_path.mkdir(exist_ok=True)
+        file_path.rename(folder_path.joinpath(file_path))
 
 if __name__ == '__main__':
     organise()
